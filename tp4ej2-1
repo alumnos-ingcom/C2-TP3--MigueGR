@@ -1,0 +1,47 @@
+################
+# Miguel Grizzi - @MigueGR
+# TP4 Ejercicio 2
+# UNRN Andina - Introducción a la Ingenieria en Computación
+################
+
+
+def ingreso_entero(mensaje):
+    """
+    Esta funcion muestra un mensaje y agrega la # para indicar el ingreso
+    de un número entero.
+    """
+    ingreso = input(mensaje + " #")
+    try:
+        entero = int(ingreso)
+    except ValueError as err:
+        raise IngresoIncorrecto("No era un número!") from err
+    return entero
+
+
+def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
+    pass
+def ingreso_entero_restringido(mensaje, valor_minimo=0, valor_maximo=10):
+    pass
+
+class IngresoIncorrecto(Exception):
+    """Esta es la Excepcion para el ingreso incorrecto"""
+    pass
+
+
+def suma_lenta(numero, otro_numero):
+    """Esta funcion es para aplicar suma lenta"""    
+    ciclo = otro_numero
+    contador = numero
+    while ciclo>0:
+        contador = contador + 1
+        print(contador)
+        ciclo = ciclo - 1
+        
+def prueba():
+    numero = ingreso_entero("Ingresa numero a sumar")
+    otro_numero = ingreso_entero("Ingresar numero sumador")
+    suma_lenta(numero, otro_numero)
+    
+       
+if __name__ == "__main__":
+    prueba()  
