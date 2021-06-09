@@ -1,0 +1,33 @@
+################
+# Miguel Grizzi - @MigueGR
+# TP4 Ejercicio 2
+# UNRN Andina - Introducción a la Ingenieria en Computación
+################
+
+      
+def ingreso_entero_b(otro_numero):
+    """Ingreso de numero B"""
+    otro_numero = int(input("Ingresar cantidad de veces a sumar: "))
+    return(otro_numero)
+
+
+def ingreso_entero_a(numero):
+    """Ingreso de numero A"""
+    numero = int(input("Ingresar valor a sumar: "))
+    return(numero)
+
+          
+def prueba():
+    def suma_lenta(numero, otro_numero):
+        """Esta funcion es para suma lenta"""
+        ciclo = otro_numero
+        contador = numero
+        while ciclo>0:
+            contador = contador + 1
+            print(contador)
+            ciclo = ciclo - 1
+           
+ 
+if __name__ == "__main__":
+    prueba()
+   
